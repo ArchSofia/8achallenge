@@ -1,0 +1,58 @@
+.footercontainer{
+    background-color: var(--shadow);
+    height: 160px;
+    width: 100%;
+    /* border: 2px solid red; */
+}
+
+.firstline{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    /* border: 2px solid blue; */
+    margin-left: 149px;
+    margin-right: 149px;
+    align-items: center;
+}
+
+.date{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'proximanova-regular-webfont';
+    font-size: 16px;
+    color: #405457;
+    letter-spacing: 0;
+    width: 205px;
+    height: 62px;
+    /* border: 2px solid green; */
+    text-align: center;
+}
+
+.socialicons{
+    /* border: 2px solid violet;  */
+    height: 45px;
+    width: 320px;
+    gap: 1.5rem;
+    font-size: 45px;
+    cursor: pointer;
+    color: #CFCFCF;
+}
+
+.icons{
+    height: 45px;
+    width: 45px;
+}
+
+.secondline{
+    margin-left: 149px;
+    margin-right: 149px;
+    margin-top: 22px;
+    color: #CFCFCF;
+}
+
+hr{
+    color: var(--shadow);
+}
