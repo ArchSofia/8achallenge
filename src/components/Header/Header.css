@@ -1,0 +1,73 @@
+.header{
+    align-items: center;
+    background-image: url("./src/assets/Group 4.svg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 21.88rem;
+    height: 350px;
+    width:100%;   
+}
+
+.headerItems{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.webinar{
+align-items: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+background-color: var(--accent);
+color: var(--white);
+/* border: 2px solid red; */
+font-family: 'SharpSansNo1-Bold';
+font-size: 13px;
+letter-spacing: 0.93px;
+line-height: 15px;
+text-align: center;
+padding-top: 0.6rem;
+padding-bottom: 0.6rem;
+padding-left: 0.8rem;
+padding-right: 0.8rem;
+border-radius: 3px;
+width: 88px;
+height: 25px;
+}
+
+.mainTitle{
+align-items: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+line-height: 52px;
+color: var(--primary);
+font-family: 'SharpSansNo1-Bold';
+font-size: 40px;
+width: 960px;
+margin-top: 26px;
+
+}
+
+span{
+font-family: 'SharpSansNo1-BoldItalic';
+font-size: 40px;
+color: var(--primary);
+text-align: center;
+line-height: 52px;
+}
+
+.subtitle{
+font-family: 'SharpSansNo1-Semibold';
+font-size: 21px;
+color:  var(--primary);
+text-align: center;
+line-height: 40px;
+
+}

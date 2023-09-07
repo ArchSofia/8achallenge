@@ -1,19 +1,20 @@
 :root{
-  --primary:  rgb(2,54, 21);
-  --secondary: rgb(64,84,87);
+  --primary:  #02363D ;
+  --secondary: #405457;
 
-  --white: rgb(255,255,255);
-  --shadow: rgb(248,249,249);
+  --white: #FFFFFF;
+  --shadow: #F8F9F9;
   --grey: rgb(232,232,232);
+  --input-border: #68737D;
   --grey-footer: rgb(204,204,204);
+
+  --accent: #C05100;
 }
 
 *{
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'proximanova-regular-webfont', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -21,10 +22,10 @@
 
 body {
   margin: 0;
-  display: flex;
+  /* display: flex;
   place-items: center;
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 100vh; */
 }
 
 @font-face {
@@ -119,13 +120,13 @@ body {
 
 @font-face {
   font-family: 'SharpSansNo1Medium-Regular';
-  src: url('.static/fonts/SharpSansNo1Medium-Regular.woff') format('woff');
+  src: url('./static/fonts/SharpSansNo1Medium-Regular.woff') format('woff');
 }
 
-@font-face {
+/* @font-face {
   font-family: 'SharpSansNo1Medium-Regular';
   src: url('.static/fonts/SharpSansNo1Medium-Regular.woff2') format('woff2');
-}
+} */
 
 @font-face {
   font-family: 'shsn-webfont';
@@ -135,4 +136,15 @@ body {
 @font-face {
   font-family: 'shsn-webfont';
   src: url('.static/fonts/shsn-webfont.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'SharpSansNo1-BoldItalic';
+  src: url('./static/fonts/SharpSansNo1-BoldItalic.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: 'SharpSansNo1-Semibold';
+  src: url('./static/fonts/SharpSansNo1-Semibold.woff') format('woff');
 }
