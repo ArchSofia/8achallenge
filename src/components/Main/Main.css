@@ -10,23 +10,33 @@
 }
 
 .firstcolumn{
-border: 2px red solid;
+/* border: 2px red solid; */
 }
 
 .sponsors{
-    border: 2px orange solid;
+    /* border: 2px orange solid; */
     height: 42px;
     width: 593px;
     align-items: center;
-    background-image: url("./src/assets/Grupo 5.svg");
+    background-image: url("./src/assets/Group 5.jpg");
     background-size: cover;
     background-position: center;
 }
 
 .content{
-    border: 2px green solid;
+    /* border: 2px green solid; */
     height: 897px;
     width: 565px;
+    color: var(--secondary);
+    font-family: 'proximanova-regular-webfont';
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 28px;
+    padding-top: 31px;
+}
+
+p {
+    padding-bottom: 20px; /* Establece un espacio interno de 20 píxeles después de cada párrafo */
 }
 
 .secondcolumn{
