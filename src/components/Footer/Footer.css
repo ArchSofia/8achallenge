@@ -13,6 +13,7 @@
     /* border: 2px solid blue; */
     margin-left: 149px;
     margin-right: 149px;
+    padding-top: 20px;
     align-items: center;
 }
 
@@ -35,16 +36,40 @@
     /* border: 2px solid violet;  */
     height: 45px;
     width: 320px;
-    gap: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
     font-size: 45px;
     cursor: pointer;
-    color: #CFCFCF;
+    color: white;
 }
 
-.icons{
+.icon{
     height: 45px;
     width: 45px;
+    fill: #CFCFCF;
+    border-radius: 50%;
+   
 }
+
+
+
+/* .circle-avatar {
+    width: 60px;
+    height: 60px;
+    background-color: var(--grey);
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+  }
+  
+  .circle-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  } */
 
 .secondline{
     margin-left: 149px;
