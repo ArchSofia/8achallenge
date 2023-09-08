@@ -1,0 +1,38 @@
+.maincontainer{
+    background-color: var(--white);
+    height: 1193px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 83px;
+    flex-wrap: wrap;
+}
+
+.firstcolumn{
+border: 2px red solid;
+}
+
+.sponsors{
+    border: 2px orange solid;
+    height: 42px;
+    width: 593px;
+    align-items: center;
+    background-image: url("./src/assets/Grupo 5.svg");
+    background-size: cover;
+    background-position: center;
+}
+
+.content{
+    border: 2px green solid;
+    height: 897px;
+    width: 565px;
+}
+
+.secondcolumn{
+    border: 2px violet solid;
+    height: 822px;
+    width: 463px;
+    margin-left: 101px;
+
+}
