@@ -18,12 +18,139 @@ const Form = () => {
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		//  Lógica para enviar los datos al backend en Java
+
+		// Realiza la validación del nombre
+		const nombreError = validarNombre(formData.nombre);
+
+		// Realiza la validación del nombre
+		const apellidoError = validarApellido(formData.apellido);
+
+		// Realiza la validación del correo electrónico
+		const emailError = validarEmail(formData.email);
+
+		// Realiza la validación del país
+		const paisError = validarPais(formData.pais);
+
+		// Realiza la validación del teléfono
+		const telefonoError = validarTelefono(formData.telefono);
+
+		// Realiza la validación del puesto
+		const puestoError = validarPuesto(formData.puesto);
+
+		// Actualiza el estado de errores con el resultado de la validación
+		setErrores({
+			nombre: nombreError,
+			apellido: apellidoError,
+			email: emailError,
+			pais: paisError,
+			telefono: telefonoError,
+			puesto: puestoError,
+		});
+
+		// Si no hay errores, puedes continuar con el envío de datos al backend
+		if (
+			!nombreError &&
+			!apellidoError &&
+			!emailError &&
+			!paisError &&
+			!telefonoError &&
+			!puestoError
+		) {
+			// Aquí puedes implementar la lógica para enviar los datos al backend en Java
+		}
 	};
 
 	const handleChange = (event) => {
 		const { name, value } = event.target;
 		setFormData({ ...formData, [name]: value });
+	};
+
+	// Validaciones
+
+	const validarNombre = (nombre) => {
+		// Implementa aquí tus validaciones para el nombre
+		// Por ejemplo, verificar si contiene números u otros caracteres no deseados
+		if (!nombre) {
+			return "El nombre es requerido";
+		}
+		if (nombre.match(/\d/)) {
+			return "El nombre no debe contener números ni caracteres especiales";
+		}
+		if (!/^[a-zA-ZÀ-ÖØ-öø-ÿ\s]*$/.test(nombre)) {
+			return "El nombre no debe contener números ni caracteres especiales";
+		}
+		return ""; // Si no hay errores, retorna una cadena vacía
+	};
+
+	const validarApellido = (apellido) => {
+		// Implementa aquí tus validaciones para el nombre
+		// Por ejemplo, verificar si contiene números u otros caracteres no deseados
+		if (!apellido) {
+			return "El apellido es requerido";
+		}
+		if (apellido.match(/\d/)) {
+			return "El apellido no debe contener números ni caracteres especiales";
+		}
+		if (!/^[a-zA-ZÀ-ÖØ-öø-ÿ\s]*$/.test(apellido)) {
+			return "El apellido no debe contener números ni caracteres especiales";
+		}
+		return ""; // Si no hay errores, retorna una cadena vacía
+	};
+
+	const validarEmail = (email) => {
+		if (!email) {
+			return "El correo electrónico es requerido";
+		}
+
+		// Utiliza una expresión regular para verificar si el correo electrónico tiene un formato válido
+		const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+		if (!emailPattern.test(email)) {
+			return "El correo electrónico no tiene un formato válido";
+		}
+
+		if (email.length > 100) {
+			return "El correo electrónico es demasiado largo";
+		}
+
+		return ""; // Si no hay errores, retorna una cadena vacía
+	};
+
+	// TODO: validación correo existente.
+
+	const validarPais = (pais) => {
+		if (!pais) {
+			return "El país es requerido";
+		}
+
+		return ""; // Si no hay errores, retorna una cadena vacía
+	};
+
+	const validarTelefono = (telefono) => {
+		if (!telefono) {
+			return "El número de teléfono es requerido";
+		}
+
+		// Utiliza una expresión regular para verificar si el teléfono tiene un formato válido
+		const telefonoPattern = /^[0-9]+$/;
+		if (!telefonoPattern.test(telefono)) {
+			return "El número de teléfono debe contener solo números";
+		}
+
+		return ""; // Si no hay errores, retorna una cadena vacía
+	};
+
+	const validarPuesto = (puesto) => {
+		if (!puesto) {
+			return "El puesto es requerido";
+		}
+		if (puesto.match(/\d/)) {
+			return "El puesto no debe contener números ni caracteres especiales";
+		}
+		if (!/^[a-zA-ZÀ-ÖØ-öø-ÿ\s]*$/.test(puesto)) {
+			return "El puesto no debe contener números ni caracteres especiales";
+		}
+
+		return ""; // Si no hay errores, retorna una cadena vacía
 	};
 
 	return (
@@ -53,6 +180,7 @@ const Form = () => {
 						id="apellido"
 						value={formData.apellido}
 						onChange={handleChange}
+						required
 						// Agrega validaciones aquí (por ejemplo, para evitar números)
 					/>
 					{errores.apellido && (
@@ -68,6 +196,7 @@ const Form = () => {
 						id="email"
 						value={formData.email}
 						onChange={handleChange}
+						required
 						// Agrega validaciones aquí (por ejemplo, para evitar números)
 					/>
 					{errores.email && <span className="error">{errores.email}</span>}
@@ -80,6 +209,7 @@ const Form = () => {
 						id="pais"
 						value={formData.pais}
 						onChange={handleChange}
+						required
 					>
 						<option value="">Selecciona un país</option>
 						<option value="Argentina">Argentina</option>
@@ -115,6 +245,7 @@ const Form = () => {
 						id="telefono"
 						value={formData.telefono}
 						onChange={handleChange}
+						required
 						// Agrega validaciones aquí (por ejemplo, para evitar números)
 					/>
 					{errores.telefono && (
@@ -130,6 +261,7 @@ const Form = () => {
 						id="puesto"
 						value={formData.puesto}
 						onChange={handleChange}
+						required
 						// Agrega validaciones aquí (por ejemplo, para evitar números)
 					/>
 					{errores.puesto && <span className="error">{errores.puesto}</span>}

@@ -63,5 +63,8 @@
   
   .error {
     color: red;
+    font-family: 'SharpSansNo1-Semibold';
+    font-size: 12px;
+    line-height: normal;
   }
   
