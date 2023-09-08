@@ -9,9 +9,9 @@
     flex-wrap: wrap;
 }
 
-.firstcolumn{
-/* border: 2px red solid; */
-}
+/* .firstcolumn{
+ border: 2px red solid; 
+} */
 
 .sponsors{
     /* border: 2px orange solid; */
@@ -40,9 +40,10 @@ p {
 }
 
 .secondcolumn{
-    border: 2px violet solid;
+    /* border: 2px violet solid; */
     height: 822px;
     width: 463px;
     margin-left: 101px;
+    background-color: var(--shadow);
 
 }

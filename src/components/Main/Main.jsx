@@ -1,6 +1,7 @@
 import React from "react";
 import "./Main.css";
 import Specialist from "../Specialist/specialist";
+import Form from "../Form/Form";
 
 const Main = () => {
 	return (
@@ -54,7 +55,9 @@ const Main = () => {
 					</div>
 					<div className="sponsors"></div>
 				</div>
-				<div className="secondcolumn"></div>
+				<div className="secondcolumn">
+					<Form />
+				</div>
 			</div>
 		</>
 	);

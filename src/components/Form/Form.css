@@ -1,0 +1,67 @@
+.formulario {
+    /* max-width: 400px; */
+    margin: 0 auto;
+    padding:  0px 20px 20px 20px;
+    /* border: 1px solid #ccc;
+    border-radius: 5px; */
+    color: var(--primary);
+    font-family: 'SharpSansNo1-Semibold';
+    font-size: 14px;
+    margin: 38px 48px 0px 48px;
+  }
+
+  div h2 {
+    font-family: 'SharpSansNo1-Semibold';
+    font-size: 18px;
+    text-align: center;
+    line-height: 29px;
+    margin-bottom: 48px;
+  }
+  
+  .campo {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--primary);
+    font-family: 'SharpSansNo1-Semibold';
+    font-size: 14px;
+  }
+  
+  /* input[type="text"], */
+  input,
+  select {
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--input-border);
+    color: var(--secondary);
+    
+    
+    
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+    margin-top: 35px;
+   
+    cursor: pointer;
+
+    font-family: 'SharpSansNo1-Semibold';
+    font-size: 19px;
+    color: var(--white);
+    text-align: center;
+  }
+  
+  .error {
+    color: red;
+  }
+  
