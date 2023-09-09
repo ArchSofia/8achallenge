@@ -71,3 +71,35 @@ text-align: center;
 line-height: 40px;
 
 }
+
+/* Media query para ajustar estilos en dispositivos móviles */
+@media (max-width: 768px) {
+    .header {
+      min-height: 15rem;
+      height: auto;
+      padding: 20px; /* Espaciado interior para dispositivos móviles */
+    }
+  
+    .webinar {
+      font-size: 12px;
+      width: auto;
+      padding: 5px 10px; /* Espaciado interior para dispositivos móviles */
+    }
+  
+    .mainTitle {
+      font-size: 20px;
+      line-height: 40px;
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    span {
+      font-size: 19px;
+      line-height: 40px;
+    }
+  
+    .subtitle {
+      font-size: 12px;
+      line-height: 30px;
+    }
+  }
