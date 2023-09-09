@@ -16,22 +16,58 @@ const Footer = () => {
 					<div className="date">© 2020</div>
 					<div className="socialicons">
 						<div className="icon">
-							<img src={twitter} alt={twitter} />
+							<a
+								href="https://www.twitter.com/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<img src={twitter} alt={twitter} />
+							</a>
 						</div>
 						<div className="icon">
-							<img src={fb} alt={fb} />
+							<a
+								href="https://www.facebook.com/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<img src={fb} alt={fb} />
+							</a>
 						</div>
 						<div className="icon">
-							<img src={linkdn} alt={linkdn} />
+							<a
+								href="https://www.linkedin.com/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<img src={linkdn} alt={linkdn} />
+							</a>
 						</div>
 						<div className="icon">
-							<img src={yt} alt={yt} />
+							<a
+								href="https://www.youtube.com/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<img src={yt} alt={yt} />
+							</a>
 						</div>
 						<div className="icon">
-							<img src={instagram} alt={instagram} />
+							<a
+								href="https://www.instagram.com/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<img src={instagram} alt={instagram} />
+							</a>
 						</div>
 						<div className="icon">
-							<img src={snapch} alt={snapch} />
+							<a
+								href="https://www.snapchat.com/"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<img src={snapch} alt={snapch} />
+							</a>
 						</div>
 					</div>
 				</div>
