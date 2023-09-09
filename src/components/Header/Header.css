@@ -77,7 +77,8 @@ line-height: 40px;
     .header {
       min-height: 15rem;
       height: auto;
-      padding: 20px; /* Espaciado interior para dispositivos móviles */
+      width: 100%;
+      padding:20px; /* Espaciado interior para dispositivos móviles */
     }
   
     .webinar {

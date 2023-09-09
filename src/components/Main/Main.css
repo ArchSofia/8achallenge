@@ -47,3 +47,30 @@ p {
     background-color: var(--shadow);
 
 }
+
+@media (max-width: 768px) {
+    .maincontainer {
+      padding-top: 40px; /* Ajuste de espaciado superior en pantallas pequeñas */
+      height: fit-content;
+      margin-bottom: 50px;
+    }
+  
+    .firstcolumn,
+    .secondcolumn {
+      padding-left: 20px; /* Espaciado interno aumentado en pantallas pequeñas */
+      padding-right: 20px; /* Espaciado interno aumentado en pantallas pequeñas */
+    }
+
+    .secondcolumn{
+        margin-top: 90px;
+        margin-left: 0px;
+    }
+  
+    .sponsors {
+      height: 32px; /* Ajuste de altura en pantallas pequeñas */
+    }
+  
+    .content {
+      font-size: 14px; /* Tamaño de fuente reducido en pantallas pequeñas */
+      line-height: 24px; /* Altura de línea reducida en pantallas pequeñas */
+    }};

@@ -68,6 +68,9 @@ hr{
 
 /* Media query para ajustar estilos en dispositivos móviles */
 @media (max-width: 768px) {
+  .footercontainer{
+    width: 100%;
+  }
     .firstline {
       margin-left: 0;
       margin-right: 0;
