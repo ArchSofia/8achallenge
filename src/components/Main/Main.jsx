@@ -1,6 +1,6 @@
 import React from "react";
 import "./Main.css";
-import Specialist from "../Specialist/specialist";
+import Speakers from "../Speakers/Speakers";
 import Form from "../Form/Form";
 
 const Main = () => {
@@ -20,26 +20,26 @@ const Main = () => {
 							generar una experiencia memorable para sus clientes, mientras se
 							convertía en el gran Unicornio de LATAM.
 						</p>
-						<p>Escucha de primera mano la voz de nuestros especialistas:</p>
+						<p>Escucha de primera mano la voz de nuestros eSpeakersas:</p>
 
-						<Specialist
+						<Speakers
 							nombre="José Perez"
 							rol="Presidente"
 							fotoURL="url_de_la_imagen.jpg"
 						/>
-						<Specialist
+						<Speakers
 							nombre="José Perez"
 							rol="Customer Service Senior Manager"
 							fotoURL="url_de_la_imagen.jpg"
 						/>
 
-						<Specialist
+						<Speakers
 							nombre="José Perez"
 							rol="Senior Customer Success Consultant"
 							fotoURL="url_de_la_imagen.jpg"
 						/>
 
-						<Specialist
+						<Speakers
 							nombre="José Perez"
 							rol="Gerente de Consultoría de Soluciones"
 							fotoURL="url_de_la_imagen.jpg"
