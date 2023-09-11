@@ -1,7 +1,7 @@
 import React from "react";
 import "./Specialist.css";
 
-const Specialist = ({ nombre, rol, fotoURL }) => {
+const Specialist = ({ nombre, rol }) => {
 	return (
 		<>
 			<div className="mini-card">
