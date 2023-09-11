@@ -16,25 +16,14 @@ const Form = () => {
 
 	const [errores, setErrores] = useState({});
 
-	const handleSubmit = (event) => {
+	const handleSubmit = async (event) => {
 		event.preventDefault();
 
-		// Realiza la validación del nombre
 		const nombreError = validarNombre(formData.nombre);
-
-		// Realiza la validación del nombre
 		const apellidoError = validarApellido(formData.apellido);
-
-		// Realiza la validación del correo electrónico
 		const emailError = validarEmail(formData.email);
-
-		// Realiza la validación del país
 		const paisError = validarPais(formData.pais);
-
-		// Realiza la validación del teléfono
 		const telefonoError = validarTelefono(formData.telefono);
-
-		// Realiza la validación del puesto
 		const puestoError = validarPuesto(formData.puesto);
 
 		// Actualiza el estado de errores con el resultado de la validación
@@ -47,7 +36,7 @@ const Form = () => {
 			puesto: puestoError,
 		});
 
-		// Si no hay errores, puedes continuar con el envío de datos al backend
+		// Si no hay errores, continua con el envío de datos al backend
 		if (
 			!nombreError &&
 			!apellidoError &&
@@ -56,7 +45,37 @@ const Form = () => {
 			!telefonoError &&
 			!puestoError
 		) {
-			// Aquí puedes implementar la lógica para enviar los datos al backend en Java
+			const dataToSend = {
+				name: formData.nombre,
+				surname: formData.apellido,
+				email: formData.email,
+				country: formData.pais,
+				phone: formData.telefono,
+				job: formData.puesto,
+			};
+
+			try {
+				// Realiza la solicitud POST al servidor
+				const response = await fetch("http://localhost:8080/participants/add", {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify(dataToSend), // Convierte los datos a JSON y envíalos en el cuerpo de la solicitud
+				});
+
+				if (response.ok) {
+					// La solicitud fue exitosa (código de respuesta 200)
+					// Aquí puedes manejar la respuesta del servidor si es necesario
+					console.log("Solicitud POST exitosa");
+				} else {
+					// La solicitud no fue exitosa, puedes manejar el error aquí
+					console.error("Error en la solicitud POST:", response.statusText);
+				}
+			} catch (error) {
+				// Maneja cualquier error de red u otros errores aquí
+				console.error("Error en la solicitud POST:", error);
+			} // Aquí puedes implementar la lógica para enviar los datos al backend en Java
 		}
 	};
 
@@ -114,8 +133,6 @@ const Form = () => {
 
 		return ""; // Si no hay errores, retorna una cadena vacía
 	};
-
-	// TODO: validación correo existente.
 
 	const validarPais = (pais) => {
 		if (!pais) {
