@@ -66,20 +66,43 @@ hr{
     color: var(--shadow);
 }
 
+@media (max-width: 425px) {
+  .icon {
+  width: 85%;
+  height: 50%;}
+
+  .socialicons{
+    width: 85%;
+    height: 50%;
+  }
+
+  .firstline {
+    flex-direction: column-reverse;
+    margin-right: 0;
+  }
+
+
+}
+
 /* Media query para ajustar estilos en dispositivos móviles */
 @media (max-width: 768px) {
   .footercontainer{
     width: 100%;
+   
   }
     .firstline {
       margin-left: 0;
       margin-right: 0;
+      flex-direction: column-reverse;
     }
   
     .date {
       width: 100%;
       height: auto;
       margin-bottom: 0;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
     }
   
     .socialicons {
@@ -101,3 +124,4 @@ hr{
       display: block; /* Mostrar la línea horizontal en dispositivos móviles */
     }
   }
+

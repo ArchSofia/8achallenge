@@ -48,29 +48,77 @@ p {
 
 }
 
-@media (max-width: 768px) {
-    .maincontainer {
-      padding-top: 40px; /* Ajuste de espaciado superior en pantallas pequeñas */
-      height: fit-content;
-      margin-bottom: 50px;
-    }
-  
-    .firstcolumn,
-    .secondcolumn {
-      padding-left: 20px; /* Espaciado interno aumentado en pantallas pequeñas */
-      padding-right: 20px; /* Espaciado interno aumentado en pantallas pequeñas */
-    }
 
-    .secondcolumn{
-        margin-top: 90px;
-        margin-left: 0px;
-    }
+
+@media (max-width: 1024px) {
+  /* Estilos para pantallas de hasta 1024px de ancho */
+  .maincontainer {
+    padding-top: 40px; /* Ajuste de espaciado superior en pantallas pequeñas */
+    height: fit-content;
+    margin-bottom: 50px;
+  }
+
+  .firstcolumn,
+  .secondcolumn {
+    padding-left: 20px; /* Espaciado interno aumentado en pantallas pequeñas */
+    padding-right: 20px; /* Espaciado interno aumentado en pantallas pequeñas */
+  }
+
+  .secondcolumn {
+    margin-top: 90px;
+    margin-left: 0px;
+  }
+
+  .sponsors {
+    height: 32px; /* Ajuste de altura en pantallas pequeñas */
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .content {
+    font-size: 14px; /* Tamaño de fuente reducido en pantallas pequeñas */
+    line-height: 24px; /* Altura de línea reducida en pantallas pequeñas */
+    width: 385px;
+  }
+}
+
+@media (max-width: 380px) {
+  /* Estilos para pantallas de hasta 380px de ancho */
+  .maincontainer {
+    height: auto;
+    padding-top: 20px;
+    flex-direction: column; /* Cambia la dirección de la fila a columna */
+    padding-top: 0px;
+  }
+
+  .sponsors {
+    width: 90%; /* Ocupa todo el ancho disponible */
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 88px;
+  }
+
+  .content {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding-top: 15px; /* Espaciado superior reducido */
+    font-size: 14px; /* Tamaño de fuente reducido */
+    line-height: 24px; /* Espaciado entre líneas reducido */
+  }
+
+  .secondcolumn {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin-left: 0; /* Sin margen izquierdo */
+    height: auto; /* Altura automática */
+    background-color: var(--white); /* Cambia el color de fondo */
+  }
+}
+ 
   
-    .sponsors {
-      height: 32px; /* Ajuste de altura en pantallas pequeñas */
-    }
+
   
-    .content {
-      font-size: 14px; /* Tamaño de fuente reducido en pantallas pequeñas */
-      line-height: 24px; /* Altura de línea reducida en pantallas pequeñas */
-    }};
+
+
+
+    
+
