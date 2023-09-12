@@ -1,8 +1,11 @@
 import React from "react";
 import { useState } from "react";
 import "./Form.css";
+import Modal from "../Modal/Modal.jsx";
 
 const Form = () => {
+	const [mostrarModal, setMostrarModal] = useState(false);
+
 	const [formData, setFormData] = useState({
 		nombre: "",
 		apellido: "",
@@ -65,6 +68,7 @@ const Form = () => {
 				});
 
 				if (response.ok) {
+					setMostrarModal(true);
 					// La solicitud fue exitosa (código de respuesta 200)
 					// Aquí puedes manejar la respuesta del servidor si es necesario
 					console.log("Solicitud POST exitosa");
@@ -286,6 +290,12 @@ const Form = () => {
 
 				<button type="submit">Inscríbete</button>
 			</form>
+			{mostrarModal && (
+				<Modal
+					mostrar={mostrarModal}
+					cerrarModal={() => setMostrarModal(false)}
+				/>
+			)}
 		</div>
 	);
 };
