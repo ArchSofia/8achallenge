@@ -1,9 +1,14 @@
 import React from "react";
 
-const Modal = ({ mostrar, cerrarModal }) => {
+const Modal = ({
+	mostrar,
+	cerrarModal,
+	modalClassname,
+	contenidoClassname,
+}) => {
 	return (
 		<div className={`modal ${mostrar ? "mostrar" : ""}`}>
-			<div className="modal-contenido">
+			<div className="contenido">
 				<span className="modal-cerrar" onClick={cerrarModal}>
 					&times;
 				</span>

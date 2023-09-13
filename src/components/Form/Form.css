@@ -68,3 +68,38 @@
     line-height: normal;
   }
   
+  .contenido {
+    background-color: white;
+    padding: 20px;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+  }
+
+/* Estilo del modal */
+.modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+/* Estilo para el botón de cerrar */
+.modal-cerrar {
+  position: absolute;
+  top: 3px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.contenido p {
+  margin: 30px;
+  padding: 0;
+}
